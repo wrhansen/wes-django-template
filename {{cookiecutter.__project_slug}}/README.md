@@ -24,7 +24,6 @@ installed, simply run these commands from the project root command line:
 * `just shell` -- gain a bash shell into the web container
 * `just cleandb` -- flush the postgres database to start fresh
 * `just test` -- run unit tests
-* `just init` -- setup initial project space
 
 
 ## Run the server (local development)
@@ -32,8 +31,7 @@ installed, simply run these commands from the project root command line:
 This project comes with a dockerfile and docker compose setup for local development.
 Use the following docker compose commands:
 
-* first time use: `just init` -- to setup the project space before running any
-    docker commands
+* first time use: `cp env.template .env` -- to create the .env file
 * `docker compose up` -- start up the docker containers, including the web server
     and database.
 * visit `http://localhost:8000` in a web browser
