@@ -11,3 +11,6 @@ cleandb:
 
 test:
     docker compose run --rm web ./manage.py test
+
+init:
+    cp -u -p env.template .env

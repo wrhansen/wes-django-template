@@ -31,7 +31,7 @@ pipx install cookiecutter
 Run cookiecutter on the template
 
 ```sh
-pipx run cookiecutter https://github.com/wrhansen/wes-django-template.git
+pipx run cookiecutter gh:wrhansen/wes-django-template.git
 ```
 
 Answer the prompts, and then a new project will be created based on your inputs.
