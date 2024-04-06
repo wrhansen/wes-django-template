@@ -1,0 +1,7 @@
+{
+    "project_name": "Project Name",
+    "description": "Enter a short description for this project.",
+    "__project_slug": "{{ cookiecutter.project_name|lower|replace(' ', '-') }}",
+    "__package_name": "{{ cookiecutter.project_name|lower|replace(' ', '_') }}",
+    "__project_titlecase": "{{ cookiecutter.project_name|title|replace(' ', '') }}"
+}

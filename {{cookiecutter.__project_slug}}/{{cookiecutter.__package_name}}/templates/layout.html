@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{{cookiecutter.project_name}}</title>
+
+    {% raw %}{% load static %}{% endraw %}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% raw %}{% static 'css/base.css' %}{% endraw %}">
+
+</head>
+{% raw %}<body class="bg-bg p-16" hx-boost="true" hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}'>{% endraw %}
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a href="#" class="navbar-brand">{{cookiecutter.project_name}}</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link active" aria-current="page">Home</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    {% raw %}{% block content %}{% endraw %}
+    {% raw %}{% endblock content %}{% endraw %}
+    <script src="{% raw %}{% static 'js/htmx.js' %}{% endraw %}" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="{% raw %}{% static 'js/site.js' %}{% endraw %}"></script>
+</body>
+</html>
